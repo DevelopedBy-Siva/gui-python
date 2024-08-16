@@ -57,10 +57,18 @@ while not winner:
             winner = my_turtle.pencolor()
 
 
-# Result
+
+# Display Result
+result = Turtle()
+result.hideturtle()
+result.color("black")
+result.penup()
+
 if winner == user_bet.lower():
-    print(f"You've won! The {winner} turtle is the winner!")
+    result_str =f"You've won!\nThe {winner} turtle is the winner!"
 else:
-    print(f"You've lost! The {winner} turtle is the winner!")
+    result_str = f"You've lost!\nThe {winner} turtle is the winner!"
+
+result.write(f"{result_str}", False, font=("Courier", 15, "normal"), align="center")
 
 screen.exitonclick()
