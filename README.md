@@ -16,3 +16,27 @@ A collection of Python Turtle scripts for creating art, games, and animations
    ```bash
    python main.py
    ```
+
+---
+
+### Fruit-Snake
+
+![Fruit-Snake](resources/fruit-snake.gif)
+
+---
+
+### Turtle-Race
+
+![Turtle-Race](resources/turtle-race.gif)
+
+---
+
+### Hirst-Dots-Art
+
+![Hirst-Dots-Art](resources/hirst-dots-art.gif)
+
+---
+
+### Sketch-Book
+
+![Sketch-Book](resources/sketch-book.gif)
