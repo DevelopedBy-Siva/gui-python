@@ -14,7 +14,7 @@ class Snake:
 
     def setup_initial_snake(self):
         """
-        Create a snake with 3 parts: head, body, tail
+        Create a snake with 3 parts
         """
         for pos in range(3):
             body_part = self.construct_part()
@@ -47,6 +47,7 @@ class Snake:
         The rest of the body moves by shifting each part to the prev position of the part in front of it.
         """
         time.sleep(SNAKE_SPEED)  # Control snake speed
+
         no_of_segments = len(self.snake_body) - 1
         for idx in range(no_of_segments, 0, -1):
             x, y = self.snake_body[idx - 1].position()
@@ -59,9 +60,15 @@ class Snake:
         Returns:
             boolean: If game over, returns True, else False
         """
+        # Check head collide with the wall
         x, y = self.head.position()
-        if abs(x) > 300 or abs(y) > 300:
+        if abs(x) > 280 or abs(y) > 280:
             return True
+
+        # Check snake head collide with the tail
+        for part in self.snake_body[1:]:
+            if self.head.distance(part) < 10:
+                return True
         return False
 
     def up(self):
