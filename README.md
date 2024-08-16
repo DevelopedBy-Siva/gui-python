@@ -21,22 +21,31 @@ A collection of Python Turtle scripts for creating art, games, and animations
 
 ### Fruit-Snake
 
-![Fruit-Snake](resources/fruit-snake.gif)
+<p align="center">
+  <img src="resources/fruit-snake.gif" alt="Turtle-Race">
+</p>
 
 ---
 
 ### Turtle-Race
 
-![Turtle-Race](resources/turtle-race.gif)
+<p align="center">
+  <img src="resources/turtle-race.gif" alt="Turtle-Race">
+</p>
 
 ---
 
 ### Hirst-Dots-Art
 
-![Hirst-Dots-Art](resources/hirst-dots-art.gif)
+<p align="center">
+  <img src="resources/hirst-dots-art.gif" alt="Hirst-Dots-Art">
+</p>
 
 ---
 
 ### Sketch-Book
 
-![Sketch-Book](resources/sketch-book.gif)
+<p align="center">
+  <img src="resources/sketch-book.gif" alt="Sketch-Book">
+</p>
+
