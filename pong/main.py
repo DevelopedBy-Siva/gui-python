@@ -48,7 +48,7 @@ screen.onkey(key="Down", fun=paddle_right.down)
 while not score.game_over():
     screen.update()
     # Control ball speed
-    time.sleep(0.03)
+    time.sleep(0.01)
 
     result_l, result_r = ball.move()
     if result_l != 0 or result_r != 0:
