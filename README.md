@@ -4,15 +4,24 @@ A collection of Python Turtle scripts for creating art, games, and animations
 
 ### How to run
 
-1. Install the packages:
+1. Python used:
+
+   ```bash
+   python --version
+   Python 3.12.4
+   ```
+
+2. Install the packages:
+
    ```bash
    pip install -r requirements.txt
    ```
-2. Navigate to the directory of the desired application:
+
+3. Navigate to the directory of the desired application:
    ```bash
    cd [application_name]
    ```
-3. Execute the main Python script:
+4. Execute the main Python script:
    ```bash
    python main.py
    ```
@@ -21,9 +30,16 @@ A collection of Python Turtle scripts for creating art, games, and animations
 
 <br><br>
 
+<h3 align="center">Pong</h3>
+<p align="center">
+  <img src="__resources/pong.gif" alt="Pong" width="500">
+</p>
+
+<br><br>
+
 <h3 align="center">Fruit-Snake</h3>
 <p align="center">
-  <img src="__resources/fruit-snake.gif" alt="Turtle-Race" width="500">
+  <img src="__resources/fruit-snake.gif" alt="Fruit-Snake" width="500">
 </p>
 
 <br><br>
