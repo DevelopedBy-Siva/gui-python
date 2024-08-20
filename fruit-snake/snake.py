@@ -71,6 +71,18 @@ class Snake:
                 return True
         return False
 
+    def reset_snake(self):
+        """
+        Reset the snake
+        """
+        # Hide the existing snake
+        for body in self.snake_body:
+            body.hideturtle()
+
+        self.snake_body.clear()
+        self.setup_initial_snake()
+        self.head = self.snake_body[0]
+
     def up(self):
         """
         Move the snake's head upward when 'Up' key is pressed.

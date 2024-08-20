@@ -24,8 +24,10 @@ screen.onkey(key="Down", fun=snake.down)
 screen.onkey(key="Left", fun=snake.left)
 screen.onkey(key="Right", fun=snake.right)
 
-# Loop until snake collides
-while not snake.check_collision():
+# Press 'x' to exit the game
+screen.onkey(key="x", fun=score.game_over)
+
+while not score.exit:
     screen.update()
     snake.move()  # Move snake
 
@@ -35,7 +37,9 @@ while not snake.check_collision():
         snake.grow()  # Increase snake size
         score.add_point()  # Increment score
 
-# Display game over message on the screen
-score.game_over()
-
-screen.exitonclick()
+    # Check for snake collides
+    if snake.check_collision():
+        # Reset game
+        score.reset_score()
+        food.relocate()
+        snake.reset_snake()

@@ -11,30 +11,55 @@ class ScoreBoard(Turtle):
         """
         super().__init__()
         self.score = 0
+        self.high_score = self.__read_high_score()
+        self.exit = False
         self.hideturtle()
         self.color("red")
         self.penup()
         self.goto(0, 270)
-        self.refresh_score()
+        self.__refresh_score()
 
     def add_point(self):
         """
         Increases the score by one point and updates the scoreboard
         """
         self.score += 1
-        self.refresh_score()
+        self.__refresh_score()
 
-    def refresh_score(self):
+    def reset_score(self):
+        """
+        Clear and display 'Game Over'
+        """
+        if self.score > self.high_score:
+            self.high_score = self.score
+            self.__save_high_score()
+
+        self.score = 0
+        self.__refresh_score()
+
+    def __refresh_score(self):
         """
         Clear and update the scoreboard
         """
         self.clear()
-        self.write(f"Score: {self.score}", False, font=STYLE, align="center")
+        self.write(
+            f"Score: {self.score}   High Score: {self.high_score}",
+            False,
+            font=STYLE,
+            align="center",
+        )
 
     def game_over(self):
         """
-        Clear and display 'Game Over'
+        Stop the game
         """
-        self.clear()
-        self.goto(0, 0)
-        self.write(f"GAME OVER", False, font=STYLE, align="center")
+        self.exit = True
+
+    def __read_high_score(self):
+        with open("high_score.txt") as file:
+            content = file.read()
+        return int(content)
+
+    def __save_high_score(self):
+        with open("high_score.txt", mode="w") as file:
+            file.write(str(self.high_score))
