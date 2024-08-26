@@ -44,6 +44,13 @@ A collection of Python Turtle scripts for creating art, games, and animations
 
 <br><br>
 
+<h3 align="center">US-States</h3>
+<p align="center">
+  <img src="__resources/us-states.png" alt="US-States" width="500">
+</p>
+
+<br><br>
+
 <h3 align="center">Turtle-Race</h3>
 <p align="center">
   <img src="__resources/turtle-race.gif" alt="Turtle-Race" width="500">
