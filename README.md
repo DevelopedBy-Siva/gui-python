@@ -1,6 +1,6 @@
-# py-turtle-graphics
+# gui-python
 
-A collection of Python Turtle scripts for creating art, games, and animations
+A collection of Python GUI apps
 
 ### How to run
 
